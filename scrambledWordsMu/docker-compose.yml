@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  apache:
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+    volumes: 
+      - ./scrambledWordsMu:/var/www/html
+    container_name: php-mu
+    ports:
+      - 3001:80
